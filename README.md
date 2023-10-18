@@ -1,80 +1,45 @@
-# MATPLOTLIB-AND-REGRESSION
-As a senior data analyst at the company, you've been given access to the complete data from their most recent animal study. In this study, 249 mice who were identified with SCC tumors received treatment with a range of drug regimens. Over the course of 45 days, tumor development was observed and measured. The purpose of this study was to compare the performance of Pymaceuticals’ drug of interest, Capomulin, against the other treatment regimens.
+Pymaceuticals, Inc. - Anti-Cancer Medication Study
+Objective: To evaluate the performance of Pymaceuticals' drug of interest, Capomulin, in comparison to other treatment regimens. We are looking at data from a pharmaceutical company that works with anti-cancer medication. We will looking at how the different types of anti-cancer medication will affect mice, and the tumour volume on the mice.
 
-The executive team has tasked you with generating all of the tables and figures needed for the technical report of the clinical study. They have also asked you for a top-level summary of the study results.
+In this study, 249 mice with squamous cell carcinoma (SCC) tumors were subjected to various drug regimens. Over 45 days, the development of tumors was observed and measured. The primary objective of this study was to evaluate the performance of Pymaceuticals' drug of interest, Capomulin, in comparison to other treatment regimens.
 
 Instructions
-This assignment is broken down into the following tasks:
+Please open the file called: main.ipynb in the matplotlib-challenge/Pymaceuticals and run the code.
 
-Prepare the data.
+Project Tasks
+The project tasks are divided into several steps, each contributing to a comprehensive analysis of the study results. Here's a breakdown of what I've done.
 
-Generate summary statistics.
+1. Prepare the Data
+Import the required packages and load the data.
+Merge the mouse_metadata and study_results DataFrames into a single DataFrame.
+Identify unique mouse IDs and check for duplicate time points.
+Create a cleaned DataFrame with duplicate data removed.
 
-Create bar charts and pie charts.
+2. Generate Summary Statistics
+Create a DataFrame of summary statistics for each drug regimen.
+Calculate and display the mean, median, variance, standard deviation, and SEM of tumor volume for each regimen.
 
-Calculate quartiles, find outliers, and create a box plot.
+3. Create Bar Charts and Pie Charts
+Create two identical bar charts displaying the total number of rows (Mouse ID/Timepoints) for each drug regimen.
+Create two identical pie charts showing the distribution of female versus male mice in the study.
 
-Create a line plot and a scatter plot.
+4. Calculate Quartiles, Find Outliers, and Create a Box Plot
+Isolate the final tumor volume for each mouse in four promising treatment regimens (Capomulin, Ramicane, Infubinol, Ceftamin).
+Calculate quartiles and the interquartile range (IQR) to identify potential outliers.
+Generate a box plot displaying the final tumor volume distribution for each treatment regimen, highlighting potential outliers.
 
-Calculate correlation and regression.
+5. Create a Line Plot and a Scatter Plot
+Select a single mouse treated with Capomulin and create a line plot of tumor volume versus time point for that mouse.
+Generate a scatter plot showing mouse weight versus the average observed tumor volume for the entire Capomulin treatment group.
 
-Submit your final analysis.
+6. Calculate Correlation and Regression
+Calculate the correlation coefficient and perform linear regression analysis between mouse weight and average observed tumor volume for the Capomulin treatment regimen.
+Plot the linear regression model on top of the scatter plot.
+Getting Started
+To begin your analysis, download the project files and open the Jupyter Notebook provided. Follow the step-by-step instructions within the notebook to complete each task. Feel free to explore different methods and libraries to achieve the desired results.
 
-Prepare the Data
-Run the provided package dependency and data imports, and then merge the mouse_metadata and study_results DataFrames into a single DataFrame.
-
-Display the number of unique mice IDs in the data, and then check for any mouse ID with duplicate time points. Display the data associated with that mouse ID, and then create a new DataFrame where this data is removed. Use this cleaned DataFrame for the remaining steps.
-
-Display the updated number of unique mice IDs.
-
-Generate Summary Statistics
-Create a DataFrame of summary statistics. Remember, there is more than one method to produce the results you're after, so the method you use is less important than the result.
-
-Your summary statistics should include:
-
-A row for each drug regimen. These regimen names should be contained in the index column.
-
-A column for each of the following statistics: mean, median, variance, standard deviation, and SEM of the tumor volume.
-
-Create Bar Charts and Pie Charts
-Generate two bar charts. Both charts should be identical and show the total total number of rows (Mouse ID/Timepoints) for each drug regimen throughout the study.
-
-Create the first bar chart with the Pandas DataFrame.plot() method.
-
-Create the second bar chart with Matplotlib's pyplot methods.
-
-Generate two pie charts. Both charts should be identical and show the distribution of female versus male mice in the study.
-
-Create the first pie chart with the Pandas DataFrame.plot() method.
-
-Create the second pie chart with Matplotlib's pyplot methods.
-
-Calculate Quartiles, Find Outliers, and Create a Box Plot
-Calculate the final tumor volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. Then, calculate the quartiles and IQR, and determine if there are any potential outliers across all four treatment regimens. Use the following substeps:
-
-Create a grouped DataFrame that shows the last (greatest) time point for each mouse. Merge this grouped DataFrame with the original cleaned DataFrame.
-
-Create a list that holds the treatment names as well as a second, empty list to hold the tumor volume data.
-
-Loop through each drug in the treatment list, locating the rows in the merged DataFrame that correspond to each treatment. Append the resulting final tumor volumes for each drug to the empty list.
-
-Determine outliers by using the upper and lower bounds, and then print the results.
-
-Using Matplotlib, generate a box plot that shows the distribution of the final tumor volume for all the mice in each treatment group. Highlight any potential outliers in the plot by changing their color and style.
-
-hint: All four box plots should be within the same figure. Use this Matplotlib documentation pageLinks to an external site. for help with changing the style of the outliers.
-
-
-## OBSERVATIONS
-
-the co relation shows 0.84 means there is a positive co relation between the weight of the mouse and the avg tumor volume
-however the p value is 1.32 which is contradictory
-
-
-Create a Line Plot and a Scatter Plot
-Select a single mouse that was treated with Capomulin, and generate a line plot of tumor volume versus time point for that mouse.
-
-Generate a scatter plot of mouse weight versus average observed tumor volume for the entire Capomulin treatment regimen.
+Conclusion
+This project offers a unique opportunity to delve into the world of pharmaceutical data analysis, providing valuable insights into the effectiveness of anti-cancer medications. By the end of this analysis, you'll have generated essential tables, charts, and statistical summaries that will contribute to the technical report on the clinical study. Your efforts will help Pymaceuticals, Inc. make informed decisions regarding its drug development efforts. Good luck with your analysis! 📊🐭🔬
 
 Calculate Correlation and Regression
 Calculate the correlation coefficient and linear regression model between mouse weight and average observed tumor volume for the entire Capomulin treatment regimen.
